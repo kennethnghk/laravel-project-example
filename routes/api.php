@@ -16,5 +16,5 @@ use Illuminate\Http\Request;
 Route::group(['prefix' => 'v2'], function () {
 
     Route::get('/merchants/{merchantId}', 'V2\MerchantController@getMerchant');
-
+    Route::get('/merchants', 'V2\MerchantController@getMerchants');
 });

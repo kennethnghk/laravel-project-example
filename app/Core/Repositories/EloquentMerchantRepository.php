@@ -26,4 +26,14 @@ class EloquentMerchantRepository extends EloquentBaseRepository
 
         return $this->where(Merchant::COLUMN_ID, $merchantId)->first();
     }
+
+    /**
+     * Get all merchants
+     *
+     * @return \Illuminate\Database\Eloquent\Model[]|\App\Core\Models\Merchant[] $merchants
+     */
+    public function getAllMerchants()
+    {
+        return $this->all();
+    }
 }
